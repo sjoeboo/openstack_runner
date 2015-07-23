@@ -13,5 +13,16 @@ A dumb, dumb script + dockerfile to do the following:
 
 * Settings.yml: Defines how often to run, noop mode, etc etc
 * auth.yml: Defines how to connect to openstacks api
-* instances.yaml: Hash of instances to be created/watched
+* instances.yaml: Hash of instances to be created/watcheid
 
+
+settings.yaml
+-------------
+
+```
+---
+sleep_seconds: 60
+noop_mode: true
+clean_puppet_cert: true
+puppet_ca: my_puppet_ca.example.com
+```
