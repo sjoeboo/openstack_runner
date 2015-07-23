@@ -50,3 +50,14 @@ os-docker-13:
   key_name: 'matthewn'
   tennant_name: 'admin'
 ```
+
+auth.yaml 
+---------
+
+```
+---
+user: 'some_admin'
+key: 'MYSECRETKEY'
+tenant: 'some_tenant'
+api: 'http://192.168.1.75:5000/v2.0/'
+```
