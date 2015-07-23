@@ -1,3 +1,5 @@
 ---
 sleep_seconds: 60
 noop_mode: true
+clean_puppet_cert: true
+puppet_ca: 'puppet-ca.broadinstitute.org'

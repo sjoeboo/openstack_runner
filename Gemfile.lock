@@ -1,7 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ffi (1.9.10)
     json (1.8.3)
+    net-ping (1.6.2)
+      ffi (>= 1.0.0)
     openstack (1.1.2)
       json
 
@@ -9,6 +12,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  net-ping (= 1.6.2)
   openstack
 
 BUNDLED WITH
