@@ -101,9 +101,15 @@ while !exit_requested
   down.each do |name,attrs|
     id=os_get_instance_id(name,os_instances)
     server=os_get_instance(os,id)
-    pp server
+    #pp server 
+    puts "Deleting/resetting state for server: #{name}"
+    #server.delete!
+    #Clean/revoke puppet cert
+    puppet_cert_cmd1="curl -k -X PUT -H \"Content-Type: text/pson\" --data '{\"desired_state\":\"revoked\"}' https://#{settings['puppet_ca']}:8140/production/certificate_status/#{attrs['fqdn']}"
+    puppet_cert_cmd2="curl -k -X DELETE -H \"Accept: pson\" https://#{settings['puppet_ca']}:8140/production/certificate_status/#{attrs['fqdn']}"
+    puts puppet_cert_cmd1
+    puts puppet_cert_cmd2
   end
-  #clear puppet cert
   #recreate based on instance info
   
   sleep sleep_time
