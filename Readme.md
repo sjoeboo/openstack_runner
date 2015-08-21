@@ -35,6 +35,8 @@ instances.yaml
 ---
 os-docker-12:
   ip: 192.168.4.12
+  fqnd: 'os-docker-12.my.domain'
+  metadata_path: 'metadata/cloud-init.yaml'
   net_name: 'Docker_Network'
   flavor_name: 'b1.filler'
   image_name: 'RHEL_7.0_bare'
